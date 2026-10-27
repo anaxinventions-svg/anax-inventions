@@ -1,0 +1,420 @@
+/* ============================================
+   OUR WORK - GRID THUMBNAILS
+   ANAX: #1d2e2a | #cc7722
+   ============================================ */
+
+.ow-section {
+  position: relative;
+  width: 100%;
+  background: #0f1412;
+  padding: 2.5rem 0 2rem;
+  overflow: hidden;
+}
+
+.ow-bg-pattern {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 30% 20%, rgba(204, 119, 34, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 70% 80%, rgba(29, 46, 42, 0.3) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.ow-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== HEADER ===== */
+.ow-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.ow-header-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #cc7722;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  background: rgba(204,119,34,0.1);
+  padding: 5px 14px;
+  border-radius: 50px;
+  border: 1px solid rgba(204,119,34,0.2);
+}
+
+.ow-header-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #cc7722;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.ow-header-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+
+.ow-header-accent {
+  color: #cc7722;
+  font-style: italic;
+}
+
+/* ===== MAIN WORKSPACE ===== */
+.ow-workspace {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* ===== ACTIVE BIG CARD (LEFT) ===== */
+.ow-active-card {
+  background: #1a1f1d;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #2a302d;
+  transition: all 0.3s ease;
+}
+
+.ow-active-image {
+  position: relative;
+  width: 100%;
+  height: 200px; /* ⬇️ COMPRESSED: pehle 260px tha */
+  overflow: hidden;
+}
+
+.ow-active-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.ow-active-card:hover .ow-active-image img {
+  transform: scale(1.05);
+}
+
+.ow-active-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(15, 20, 18, 0.9) 100%);
+}
+
+.ow-active-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fff;
+  background: #cc7722;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.ow-active-view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.ow-active-view svg {
+  font-size: 1.8rem;
+  color: #cc7722;
+}
+
+.ow-active-view span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ow-active-card:hover .ow-active-view {
+  opacity: 1;
+}
+
+/* Active Content */
+.ow-active-content {
+  padding: 1rem 1.3rem; /* ⬇️ COMPRESSED: pehle 1.2rem 1.5rem tha */
+}
+
+.ow-active-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem; /* ⬇️ COMPRESSED: pehle 1.3rem tha */
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px; /* ⬇️ COMPRESSED: pehle 6px tha */
+}
+
+.ow-active-desc {
+  font-size: 0.8rem; /* ⬇️ COMPRESSED: pehle 0.85rem tha */
+  color: #888;
+  line-height: 1.4; /* ⬇️ COMPRESSED: pehle 1.5 tha */
+  margin-bottom: 0.7rem; /* ⬇️ COMPRESSED: pehle 1rem tha */
+}
+
+/* Stats */
+.ow-active-stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.7rem; /* ⬇️ COMPRESSED: pehle 1rem tha */
+  padding: 8px 0; /* ⬇️ COMPRESSED: pehle 10px tha */
+  border-top: 1px solid #2a302d;
+  border-bottom: 1px solid #2a302d;
+}
+
+.ow-stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ow-stat-icon {
+  font-size: 0.9rem;
+  color: #cc7722;
+}
+
+.ow-stat-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #cc7722;
+}
+
+.ow-stat-label {
+  font-size: 0.65rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ow-stat-line {
+  width: 1px;
+  height: 20px;
+  background: #2a302d;
+}
+
+/* Tags */
+.ow-active-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 0.8rem; /* ⬇️ COMPRESSED: pehle 1.2rem tha */
+}
+
+.ow-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #aaa;
+  background: #252b28;
+  padding: 3px 10px;
+  border-radius: 4px;
+  border: 1px solid #333;
+}
+
+/* Link */
+.ow-active-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #cc7722;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.ow-active-link:hover {
+  gap: 12px;
+}
+
+/* ===== GRID THUMBNAILS (RIGHT) ===== */
+.ow-thumbnail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px; /* ⬆️ INCREASED: pehle 10px tha — ab zyada gap */
+}
+
+.ow-thumb-card {
+  background: #1a1f1d;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #2a302d;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 6px; /* ⬆️ ADDED: andar ka padding — card ka size thoda barha */
+}
+
+.ow-thumb-card:hover {
+  border-color: #cc7722;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ow-thumb-card.ow-thumb-active {
+  border-color: #cc7722;
+  background: rgba(204, 119, 34, 0.08);
+  box-shadow: 0 0 20px rgba(204, 119, 34, 0.15);
+}
+
+.ow-thumb-image {
+  position: relative;
+  width: 100%;
+  height: 70px; /* ⬇️ COMPRESSED: pehle 80px tha */
+  overflow: hidden;
+  border-radius: 8px; /* ⬆️ ADDED: image bhi rounded lage */
+}
+
+.ow-thumb-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.ow-thumb-card:hover .ow-thumb-image img {
+  transform: scale(1.1);
+}
+
+.ow-thumb-indicator {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #cc7722;
+  border-radius: 8px; /* ⬆️ MATCHED: image ke border radius se match */
+}
+
+.ow-thumb-info {
+  padding: 8px 4px 4px; /* ⬆️ ADJUSTED: thoda better spacing */
+}
+
+.ow-thumb-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.78rem; /* ⬇️ COMPRESSED: pehle 0.8rem tha */
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ow-thumb-category {
+  font-size: 0.55rem;
+  color: #cc7722;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== CTA ===== */
+.ow-cta {
+  text-align: center;
+  margin-top: 1.5rem; /* ⬇️ COMPRESSED: pehle 2rem tha */
+}
+
+.ow-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px; /* ⬇️ COMPRESSED: pehle 12px 28px tha */
+  background: transparent;
+  color: #cc7722;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 2px solid #cc7722;
+  transition: all 0.3s;
+}
+
+.ow-cta-btn:hover {
+  background: #cc7722;
+  color: #1d2e2a;
+  transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .ow-workspace {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .ow-thumbnail-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .ow-active-image {
+    height: 180px; /* ⬇️ COMPRESSED: pehle 220px tha */
+  }
+}
+
+@media (max-width: 600px) {
+  .ow-section {
+    padding: 1.5rem 0 1.5rem; /* ⬇️ COMPRESSED */
+  }
+
+  .ow-thumbnail-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .ow-active-image {
+    height: 160px; /* ⬇️ COMPRESSED: pehle 180px tha */
+  }
+
+  .ow-active-content {
+    padding: 0.8rem 1rem; /* ⬇️ COMPRESSED */
+  }
+
+  .ow-active-title {
+    font-size: 1.05rem; /* ⬇️ COMPRESSED */
+  }
+
+  .ow-active-desc {
+    font-size: 0.75rem;
+  }
+
+  .ow-thumb-image {
+    height: 65px; /* ⬇️ COMPRESSED: pehle 70px tha */
+  }
+
+  .ow-thumb-card {
+    padding: 4px; /* ⬇️ COMPRESSED */
+  }
+
+  .ow-cta {
+    margin-top: 1.2rem;
+  }
+}

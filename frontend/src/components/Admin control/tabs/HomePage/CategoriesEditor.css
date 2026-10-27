@@ -1,0 +1,149 @@
+/* CategoriesEditor.css */
+.categories-editor {
+  background: #fff;
+  padding: 20px;
+}
+
+.ce-header {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.ce-header h2 {
+  font-size: 20px;
+  color: #1d2e2a;
+}
+
+.ce-form {
+  background: #f8f9fc;
+  padding: 20px;
+  border: 1px solid #eef2f5;
+  margin-bottom: 30px;
+}
+
+.ce-form h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #1d2e2a;
+}
+
+.ce-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.ce-field.full {
+  grid-column: span 2;
+}
+
+.ce-field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.ce-field input, .ce-field select, .ce-field textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.ce-field input:focus, .ce-field select:focus, .ce-field textarea:focus {
+  border-color: #cc7722;
+  outline: none;
+}
+
+.ce-field input[type="checkbox"] {
+  width: auto;
+}
+
+.icon-preview {
+  margin-top: 8px;
+}
+
+.ce-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.ce-save-btn {
+  background: #cc7722;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.ce-cancel-btn {
+  background: #ddd;
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.ce-list h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.ce-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #eee;
+  margin-bottom: 8px;
+}
+
+.ce-item.inactive {
+  opacity: 0.5;
+  background: #fafafa;
+}
+
+.ce-item-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.ce-item-info strong {
+  font-size: 14px;
+  color: #1d2e2a;
+}
+
+.ce-item-info span {
+  font-size: 11px;
+  color: #888;
+  margin-left: 10px;
+}
+
+.ce-desc {
+  font-size: 11px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.ce-item-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.ce-item-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 8px;
+}
+
+.ce-empty {
+  text-align: center;
+  padding: 30px;
+  color: #888;
+}

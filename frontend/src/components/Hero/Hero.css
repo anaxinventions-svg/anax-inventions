@@ -1,0 +1,450 @@
+/* ============================================
+   HERO SECTION - v2.0 with Animated Service Text
+   ANAX: #1d2e2a | #cc7722
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== SPLIT BACKGROUND ===== */
+.hero-bg-white {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48%;
+  height: 100%;
+  background: #ffffff;
+  z-index: 0;
+}
+
+.hero-bg-dark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 52%;
+  height: 100%;
+  background: linear-gradient(135deg, #1d2e2a 0%, #1a2826 100%);
+  z-index: 0;
+}
+
+/* ===== SERVICE DOTS NAVIGATION ===== */
+.service-dot {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #cc7722;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-dot:hover {
+  background: rgba(204, 119, 34, 0.3);
+  transform: scale(1.2);
+}
+
+.service-dot.active {
+  background: #cc7722;
+  box-shadow: 0 0 12px rgba(204, 119, 34, 0.5);
+}
+
+.dot-indicator {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.service-dot.active .dot-indicator {
+  background: #fff;
+}
+
+.dot-active-ring {
+  position: absolute;
+  inset: -4px;
+  border: 2px solid #cc7722;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+/* ===== LEFT CONTENT ===== */
+.hero-content {
+  max-width: 480px;
+  z-index: 10;
+  position: relative;
+  padding-right: 20px;
+}
+
+.hero-subtitle {
+  color: #cc7722;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  color: #1d2e2a;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  animation: fadeSlideIn 0.5s ease-out;
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-tagline {
+  color: #cc7722;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 18px;
+  font-style: italic;
+}
+
+.hero-description {
+  color: #6b7280;
+  font-size: 15px;
+  line-height: 1.75;
+  margin-bottom: 30px;
+  max-width: 420px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 45px;
+  flex-wrap: wrap;
+}
+
+.hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 30px;
+  background: #1d2e2a;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: none;
+  letter-spacing: 0.3px;
+}
+
+.hero-btn-primary:hover {
+  background: #cc7722;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(204, 119, 34, 0.3);
+}
+
+.hero-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 30px;
+  background: transparent;
+  color: #1d2e2a;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: 2px solid #d1d5db;
+  letter-spacing: 0.3px;
+}
+
+.hero-btn-secondary:hover {
+  border-color: #cc7722;
+  color: #cc7722;
+  transform: translateY(-2px);
+}
+
+/* ===== DOTS ===== */
+.dots-container {
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #cc7722;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dot.active {
+  background: #cc7722;
+  box-shadow: 0 0 8px rgba(204, 119, 34, 0.4);
+}
+
+.dot:hover {
+  background: rgba(204, 119, 34, 0.3);
+}
+
+/* ===== RIGHT CAROUSEL ===== */
+.hero-carousel {
+  position: relative;
+  width: 55%;
+  height: 600px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+
+.cards-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  position: absolute;
+  width: 270px;
+  height: 460px;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.card-active:hover img,
+.card:hover img {
+  filter: brightness(0.35);
+  transform: scale(1.04);
+}
+
+/* ===== LABEL ON TOP ===== */
+.card-label-top {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  padding: 0 20px;
+  z-index: 5;
+  transition: opacity 0.3s ease;
+}
+
+.card-label-subtitle {
+  display: block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 2px;
+  margin-bottom: 6px;
+  backdrop-filter: blur(4px);
+}
+
+.card-label-title {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  line-height: 1.2;
+}
+
+.card:hover .card-label-top {
+  opacity: 0;
+}
+
+/* ===== OVERLAY ON HOVER ===== */
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 24px;
+  background: linear-gradient(to top, rgba(29, 46, 42, 0.97) 0%, rgba(29, 46, 42, 0.7) 50%, transparent 100%);
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover .card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-overlay-subtitle {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #cc7722;
+  margin-bottom: 8px;
+}
+
+.card-overlay-title {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.card-overlay-desc {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+/* ===== ANIMATED SERVICE TEXT CONTAINER ===== */
+.animated-service-container {
+  position: relative;
+  display: block;
+}
+
+/* ===== CRITICAL FIXES FOR TEXT CLIPPING ===== */
+
+/* Main heading should never clip */
+.hero-main-heading {
+  overflow: visible !important;
+  text-overflow: clip !important;
+  white-space: normal !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Animated text line - no clipping at all */
+.hero-animated-text-line {
+  overflow: visible !important;
+  text-overflow: clip !important;
+  white-space: nowrap !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+}
+
+/* The animated word itself */
+.hero-animated-word {
+  overflow: visible !important;
+  text-overflow: clip !important;
+  white-space: nowrap !important;
+  width: auto !important;
+  min-width: 100% !important;
+}
+
+/* Letter container should not compress */
+.hero-letter-container {
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+}
+
+/* Ensure all spans inside heading are visible */
+.hero-main-heading span {
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .hero { padding: 0 35px; }
+  .hero-title { font-size: 38px; }
+  .card { width: 230px; height: 390px; }
+}
+
+@media (max-width: 968px) {
+  .hero-bg-white { width: 100%; height: 55%; }
+  .hero-bg-dark { width: 100%; height: 45%; top: 55%; bottom: auto; }
+  .hero { flex-direction: column; padding: 50px 25px; text-align: center; gap: 30px; }
+  .hero-content { max-width: 100%; display: flex; flex-direction: column; align-items: center; padding-right: 0; }
+  .hero-description { margin: 0 auto 30px; }
+  .hero-carousel { width: 100%; height: 400px; }
+  .card { width: 190px; height: 330px; }
+  .hero-title { font-size: 32px; }
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 40px 15px; }
+  .hero-title { font-size: 26px; }
+  .hero-carousel { height: 340px; }
+  .card { width: 150px; height: 260px; }
+  .hero-buttons { flex-direction: column; width: 100%; }
+  .hero-btn-primary, .hero-btn-secondary { justify-content: center; text-align: center; }
+  .card-label-title { font-size: 16px; }
+  .card-overlay-title { font-size: 18px; }
+  .service-dot { width: 10px; height: 10px; }
+}
+
+/* Mobile fix - hero section compact */
+@media (max-width: 640px) {
+  .hero-section { min-height: auto !important; height: auto !important; align-items: flex-start !important; padding-top: 0.5rem !important; padding-bottom: 1rem !important; }
+  .hero-content-wrapper { padding-top: 0 !important; padding-bottom: 0 !important; }
+  .hero-card { padding-top: 1.25rem !important; padding-bottom: 1rem !important; }
+}
+
+@media (max-width: 640px) {
+  .hero-section { min-height: auto !important; height: auto !important; align-items: flex-start !important; padding-top: 0.8rem !important; padding-bottom: 1.5rem !important; }
+  .hero-content-wrapper { padding-top: 0 !important; padding-bottom: 0 !important; }
+  .hero-card { padding-top: 1.5rem !important; padding-bottom: 1.25rem !important; }
+}
+
+/* Mobile text fixes */
+@media (max-width: 768px) {
+  .hero-main-heading {
+    font-size: clamp(1.8rem, 8vw, 3rem) !important;
+  }
+
+  .hero-animated-text-line {
+    min-height: 2.5rem !important;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .hero-main-heading {
+    font-size: clamp(1.4rem, 7vw, 2.5rem) !important;
+  }
+
+  .hero-animated-text-line {
+    min-height: 2rem !important;
+  }
+}

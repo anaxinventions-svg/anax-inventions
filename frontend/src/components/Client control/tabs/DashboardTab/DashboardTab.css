@@ -1,0 +1,144 @@
+.dashboard-tab {
+  padding: 20px;
+}
+
+.welcome-section {
+  margin-bottom: 24px;
+}
+
+.welcome-section h2 {
+  font-size: 1.3rem;
+  color: #1d2e2a;
+  margin-bottom: 6px;
+}
+
+.welcome-section p {
+  color: #6c757d;
+  font-size: 0.8rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.stat-icon {
+  font-size: 2rem;
+}
+
+.stat-info h3 {
+  font-size: 1.5rem;
+  color: #1d2e2a;
+  margin: 0;
+}
+
+.stat-info p {
+  color: #6c757d;
+  font-size: 0.7rem;
+  margin: 4px 0 0;
+}
+
+.recent-projects {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.recent-projects h3 {
+  margin-bottom: 16px;
+  color: #1d2e2a;
+  font-size: 1rem;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.project-item:last-child {
+  border-bottom: none;
+}
+
+.project-info h4 {
+  font-size: 0.85rem;
+  color: #1d2e2a;
+  margin-bottom: 4px;
+}
+
+.project-info p {
+  font-size: 0.7rem;
+  color: #888;
+}
+
+.project-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress-bar {
+  width: 100px;
+  background: #e9ecef;
+  border-radius: 10px;
+  height: 6px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: #cc7722;
+  height: 100%;
+  transition: width 0.3s;
+}
+
+.project-progress span {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #cc7722;
+}
+
+.loading-state, .empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .project-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

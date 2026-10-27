@@ -1,0 +1,401 @@
+/* Clients Manager Styles - ANAX Colors: #1d2e2a | #cc7722 */
+
+.clients-manager {
+  padding: 20px;
+  background: #f8f9fa;
+  min-height: 100%;
+  border-radius: 12px;
+}
+
+/* Header */
+.cm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cm-header-left h2 {
+  font-size: 1.4rem;
+  color: #1d2e2a;
+  margin-bottom: 4px;
+}
+
+.cm-header-left p {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.cm-add-btn {
+  background: #cc7722;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cm-add-btn:hover {
+  background: #1d2e2a;
+  transform: translateY(-2px);
+}
+
+/* Table */
+.cm-table-container {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.cm-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cm-table th {
+  background: #1d2e2a;
+  color: #fff;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cm-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e9ecef;
+  font-size: 0.8rem;
+  color: #495057;
+}
+
+.cm-table tr:hover {
+  background: #f8f9fa;
+}
+
+/* Badges */
+.client-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+
+.client-badge.active {
+  background: #d4edda;
+  color: #28a745;
+}
+
+.client-badge.inactive {
+  background: #f8d7da;
+  color: #dc3545;
+}
+
+/* Action Buttons */
+.cm-action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  margin-right: 4px;
+}
+
+.cm-action-btn.edit:hover {
+  background: #e3f2fd;
+}
+
+.cm-action-btn.reset:hover {
+  background: #fff3e0;
+}
+
+.cm-action-btn.delete:hover {
+  background: #f8d7da;
+}
+
+.cm-action-btn.permanent:hover {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* Loading & Empty States */
+.cm-loading, .cm-empty {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cm-empty-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.cm-empty h3 {
+  color: #495057;
+  margin-bottom: 8px;
+}
+
+.cm-empty p {
+  color: #adb5bd;
+  font-size: 0.8rem;
+}
+
+/* Modal */
+.cm-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.cm-modal {
+  background: #fff;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cm-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.cm-modal-header h3 {
+  font-size: 1.2rem;
+  color: #1d2e2a;
+  margin: 0;
+}
+
+.cm-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #adb5bd;
+  transition: color 0.2s;
+}
+
+.cm-modal-close:hover {
+  color: #dc3545;
+}
+
+.cm-modal-body {
+  padding: 24px;
+}
+
+.cm-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.cm-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cm-form-group label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #495057;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cm-form-group input,
+.cm-form-group select {
+  padding: 10px 12px;
+  border: 1.5px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.cm-form-group input:focus,
+.cm-form-group select:focus {
+  outline: none;
+  border-color: #cc7722;
+}
+
+.cm-info-box {
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+  margin-top: 16px;
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.cm-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid #e9ecef;
+}
+
+.cm-btn-cancel {
+  padding: 10px 20px;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.cm-btn-cancel:hover {
+  background: #e9ecef;
+}
+
+.cm-btn-create {
+  padding: 10px 24px;
+  background: #cc7722;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.cm-btn-create:hover:not(:disabled) {
+  background: #1d2e2a;
+}
+
+.cm-btn-create:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Password Modal Styles */
+.password-modal {
+  max-width: 500px;
+}
+
+.password-success-icon {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.credentials-box {
+  background: #fff8f0;
+  border: 1px solid #cc7722;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 15px 0;
+}
+
+.cred-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.cred-row label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #1d2e2a;
+  min-width: 70px;
+}
+
+.cred-row code {
+  background: #1d2e2a;
+  color: #cc7722;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  flex: 1;
+  text-align: center;
+}
+
+.copy-small {
+  background: #cc7722;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.7rem;
+}
+
+.copy-small:hover {
+  background: #1d2e2a;
+}
+
+.email-status-box {
+  background: #e8f5e9;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.email-status-box p {
+  font-size: 0.75rem;
+  margin: 5px 0;
+  color: #2e7d32;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .clients-manager {
+    padding: 12px;
+  }
+  
+  .cm-form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .cm-table {
+    font-size: 0.7rem;
+  }
+  
+  .cm-table th, .cm-table td {
+    padding: 8px 10px;
+  }
+  
+  .cm-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

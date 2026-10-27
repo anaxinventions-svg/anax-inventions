@@ -1,0 +1,56 @@
+.sp-container { background: #ffffff; border-radius: 8px; box-shadow: 0 1px 8px rgba(0,0,0,0.03); overflow: hidden; }
+.sp-header { background: #1d2e2a; padding: 1.2rem 1.5rem; }
+.sp-header h2 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #cc7722; margin: 0; }
+.sp-header p { font-size: 0.68rem; color: rgba(255,255,255,0.5); margin-top: 3px; }
+.sp-layout { display: flex; min-height: 450px; }
+
+/* Sidebar */
+.sp-sidebar { width: 190px; background: #f8f9fa; padding: 1rem; display: flex; flex-direction: column; gap: 0.2rem; border-right: 1px solid #eee; flex-shrink: 0; }
+.sp-sidebar-divider { height: 1px; background: #e0e0e0; margin: 0.5rem 0; }
+
+.sp-tab { display: flex; align-items: center; gap: 0.6rem; padding: 0.65rem 0.8rem; background: transparent; border: none; color: #777; font-size: 0.78rem; font-weight: 500; cursor: pointer; border-radius: 6px; transition: all 0.2s; text-align: left; font-family: 'Inter', sans-serif; }
+.sp-tab:hover { background: #e8e8e8; color: #1d2e2a; }
+.sp-tab.active { background: #1d2e2a; color: #fff; font-weight: 600; }
+.sp-tab-danger { color: #d44 !important; }
+.sp-tab-danger:hover { background: #fee !important; color: #e44 !important; }
+.sp-tab-danger.active { background: #e44 !important; color: #fff !important; }
+
+/* Content */
+.sp-content { flex: 1; padding: 2rem; }
+.sp-form h3 { font-size: 1.1rem; color: #1d2e2a; margin-bottom: 0.3rem; }
+.sp-desc { font-size: 0.75rem; color: #888; margin-bottom: 1.5rem; line-height: 1.5; }
+
+/* Avatar */
+.sp-avatar-section { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border: 1px dashed #ddd; }
+
+.sp-avatar-preview { width: 70px; height: 70px; border-radius: 50%; overflow: hidden; cursor: pointer; position: relative; flex-shrink: 0; border: 3px solid #cc7722; }
+.sp-avatar-preview img { width: 100%; height: 100%; object-fit: cover; }
+.sp-avatar-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #cc7722; color: #fff; font-size: 1.5rem; font-weight: 700; }
+.sp-avatar-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s; }
+.sp-avatar-preview:hover .sp-avatar-overlay { opacity: 1; }
+.sp-avatar-overlay span { font-size: 1.3rem; }
+.sp-avatar-info strong { display: block; font-size: 0.85rem; color: #1d2e2a; }
+.sp-avatar-info span { font-size: 0.7rem; color: #888; }
+
+/* Fields */
+.sp-field { margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.3rem; }
+.sp-field label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #666; }
+.sp-field input { padding: 0.65rem 0.8rem; border: 1.5px solid #e0e0e0; border-radius: 6px; font-size: 0.82rem; font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.3s; background: #fafafa; }
+.sp-field input:focus { border-color: #cc7722; background: #fff; }
+
+.sp-btn { padding: 0.7rem 2rem; background: #cc7722; color: #fff; border: none; border-radius: 6px; font-size: 0.85rem; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; transition: all 0.3s; }
+.sp-btn:hover { background: #e0882e; transform: translateY(-1px); box-shadow: 0 4px 15px rgba(204,119,34,0.3); }
+.sp-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+.sp-btn-outline { display: block; width: 100%; padding: 0.7rem 1rem; margin-bottom: 0.5rem; background: #fff; border: 1.5px solid #e0e0e0; border-radius: 6px; font-size: 0.8rem; cursor: pointer; font-family: 'Inter', sans-serif; text-align: left; transition: all 0.2s; }
+.sp-btn-outline:hover { border-color: #cc7722; background: #fff8f0; }
+.sp-actions { margin-top: 0.5rem; }
+.sp-logout-icon { font-size: 3.5rem; margin-bottom: 1rem; }
+
+@media (max-width: 600px) {
+  .sp-layout { flex-direction: column; }
+  .sp-sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; gap: 0.3rem; padding: 0.8rem; }
+  .sp-sidebar-divider { display: none; }
+  .sp-tab { font-size: 0.7rem; padding: 0.4rem 0.6rem; }
+  .sp-content { padding: 1.5rem; }
+}

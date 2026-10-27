@@ -1,0 +1,279 @@
+/* ============================================
+   TRUST BADGE - CARD LEFT/RIGHT POSITION
+   No hero section overlap
+   ============================================ */
+
+.trust-section {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  padding: 2rem 0 3rem;
+  /* ENSURE minimum height */
+  min-height: 250px;
+  overflow: visible;
+  z-index: 1;
+}
+.trust-top-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  max-width: 700px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e0d8cc, #cc772240, #e0d8cc, transparent);
+}
+
+.trust-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* ===== HEADER ===== */
+.trust-header {
+  margin-bottom: 2.5rem;
+}
+
+.trust-header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #888;
+  text-transform: uppercase;
+  background: #fdfdfd;
+  padding: 9px 22px;
+  border-radius: 50px;
+  border: 1px solid #ececec;
+}
+
+.trust-header-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #cc7722;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.7); }
+}
+
+/* ===== GRID ===== */
+.trust-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.8rem;
+  position: relative;
+}
+
+/* ===== ITEM ===== */
+.trust-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 16px;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.trust-item:hover {
+  z-index: 15;
+  background: #fafafa;
+}
+
+/* ===== LOGO BOX ===== */
+.trust-logo-box {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: #f8f8f8;
+  border: 2px solid #eee;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.trust-item:hover .trust-logo-box {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  border-color: #cc7722;
+}
+
+.trust-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trust-logo-ring {
+  position: absolute;
+  inset: -3px;
+  border-radius: 17px;
+  border: 1.5px solid transparent;
+  transition: all 0.4s ease;
+}
+
+.trust-item:hover .trust-logo-ring {
+  border-color: #cc7722;
+  animation: ringRotate 3s linear infinite;
+}
+
+@keyframes ringRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== NAME ===== */
+.trust-name-group {
+  text-align: center;
+}
+
+.trust-company-name {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1d2e2a;
+}
+
+.trust-item:hover .trust-company-name {
+  color: #cc7722;
+}
+
+.trust-company-type {
+  font-size: 0.6rem;
+  color: #aaa;
+  margin-top: 2px;
+}
+
+/* ===== HOVER CARD - LEFT/RIGHT ===== */
+.trust-hover-card {
+  position: absolute;
+  top: 0;
+  width: 280px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+  z-index: 30;
+}
+
+/* Left side items: card opens to RIGHT */
+.trust-hover-right {
+  left: calc(100% + 20px);
+}
+
+/* Right side items: card opens to LEFT */
+.trust-hover-left {
+  right: calc(100% + 20px);
+}
+
+.trust-hover-content {
+  padding: 18px;
+}
+
+.trust-hover-img {
+  width: 100%;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.trust-hover-project {
+  font-size: 0.73rem;
+  color: #444;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.trust-hover-divider {
+  height: 1px;
+  background: #f0f0f0;
+  margin: 10px 0;
+}
+
+.trust-hover-result {
+  font-size: 0.7rem;
+  color: #1d2e2a;
+  font-weight: 600;
+}
+
+.trust-hover-result span {
+  color: #1d2e2a;
+  background: #e8f5e9;
+  padding: 2px 8px;
+  border-radius: 50px;
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+
+.trust-hover-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: 0.55rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #cc7722;
+  background: rgba(204,119,34,0.04);
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(204,119,34,0.1);
+}
+
+/* ===== BOTTOM ===== */
+.trust-bottom-text {
+  margin-top: 2.5rem;
+  font-size: 0.7rem;
+  color: #bbb;
+  font-style: italic;
+}
+
+.trust-bottom-text span {
+  color: #cc7722;
+  font-weight: 700;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .trust-section {
+    padding: 2rem 0 2.5rem;
+  }
+  
+  .trust-grid {
+    gap: 1rem;
+  }
+  
+  .trust-logo-box {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .trust-hover-card {
+    width: 220px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+  }
+  
+  .trust-hover-right,
+  .trust-hover-left {
+    left: 50%;
+    right: auto;
+  }
+}

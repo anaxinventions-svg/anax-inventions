@@ -1,0 +1,719 @@
+/* src/components/ServicePages/MobileAppDevelopment/MobileAppDevelopment.css */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.appdev-page {
+  width: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #ffffff;
+}
+
+.appdev-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== SECTION HEADER ===== */
+.appdev-section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.appdev-section-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1d2e2a;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+.appdev-section-header p {
+  font-size: 14px;
+  color: #6c8b85;
+}
+
+/* ===== HERO ===== */
+.appdev-hero {
+  position: relative;
+  min-height: 400px;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.appdev-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(29, 46, 42, 0.8);
+}
+
+.appdev-hero .appdev-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.appdev-hero-content {
+  max-width: 600px;
+}
+
+.appdev-hero-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #cc7722;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.appdev-hero-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+
+.appdev-hero-desc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  margin-bottom: 24px;
+  max-width: 500px;
+}
+
+.appdev-hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.appdev-btn-primary {
+  background: #cc7722;
+  color: #ffffff;
+  padding: 10px 24px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.appdev-btn-primary:hover {
+  background: #b8681a;
+  transform: translateY(-2px);
+}
+
+.appdev-btn-secondary {
+  background: transparent;
+  color: #ffffff;
+  padding: 10px 24px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  border: 1px solid #ffffff;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.appdev-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ===== TRUST BADGE ===== */
+.appdev-trust {
+  background: #1d2e2a;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.appdev-trust p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ===== WHAT WE OFFER ===== */
+.appdev-offerings {
+  padding: 60px 0;
+  background: #ffffff;
+}
+
+.appdev-offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.appdev-offer-card {
+  background: #f8f9fc;
+  padding: 20px 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #eef2f5;
+  cursor: pointer;
+}
+
+.appdev-offer-card:hover {
+  transform: translateY(-3px);
+  border-color: #cc7722;
+  background: #ffffff;
+}
+
+.appdev-offer-card i {
+  font-size: 28px;
+  color: #cc7722;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.appdev-offer-card h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1d2e2a;
+}
+
+/* ============================================================
+   RECENT PROJECTS - PROFESSIONAL CLEAN DESIGN
+   ============================================================ */
+
+.appdev-projects {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+/* Header */
+.appdev-projects-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e8ecef;
+}
+
+.appdev-projects-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.appdev-projects-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #cc7722;
+  text-transform: uppercase;
+}
+
+.appdev-projects-header-left h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1d2e2a;
+  letter-spacing: -0.5px;
+}
+
+.appdev-projects-subtitle {
+  font-size: 14px;
+  color: #6c8b85;
+  font-weight: 400;
+}
+
+/* Project Rows */
+.appdev-projects-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.appdev-project-row {
+  display: grid;
+  grid-template-columns: 320px 1fr 60px;
+  align-items: center;
+  gap: 32px;
+  padding: 28px 0;
+  border-bottom: 1px solid #e8ecef;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.appdev-project-row:first-child {
+  border-top: 1px solid #e8ecef;
+}
+
+.appdev-project-row:hover {
+  padding-left: 16px;
+  padding-right: 16px;
+  background: #fafbfc;
+}
+
+/* Image */
+.appdev-project-row-img {
+  position: relative;
+  width: 320px;
+  height: 200px;
+  overflow: hidden;
+  background: #f0f2f5;
+}
+
+.appdev-project-row-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.appdev-project-row:hover .appdev-project-row-img img {
+  transform: scale(1.04);
+}
+
+.appdev-project-row-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(29, 46, 42, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.appdev-project-row:hover .appdev-project-row-overlay {
+  opacity: 1;
+}
+
+.appdev-project-row-overlay span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Info */
+.appdev-project-row-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.appdev-project-row-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.appdev-project-row-cat {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #cc7722;
+}
+
+.appdev-project-row-num {
+  font-size: 11px;
+  font-weight: 500;
+  color: #a8b5b1;
+}
+
+.appdev-project-row-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1d2e2a;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+}
+
+.appdev-project-row-desc {
+  font-size: 13px;
+  color: #6c8b85;
+  line-height: 1.5;
+  max-width: 480px;
+}
+
+.appdev-project-row-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.appdev-project-row-tech span {
+  font-size: 11px;
+  font-weight: 500;
+  color: #1d2e2a;
+  background: #f0f2f5;
+  padding: 4px 12px;
+}
+
+/* Arrow */
+.appdev-project-row-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: #a8b5b1;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.appdev-project-row:hover .appdev-project-row-arrow {
+  color: #cc7722;
+  transform: translateX(6px);
+}
+
+/* ============================================================
+   PROJECT MODAL
+   ============================================================ */
+
+.appdev-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  animation: appdevModalFadeIn 0.3s ease;
+}
+
+@keyframes appdevModalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.appdev-modal {
+  background: #ffffff;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: appdevModalSlideUp 0.4s ease;
+}
+
+@keyframes appdevModalSlideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.appdev-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.25s ease;
+  color: #1d2e2a;
+  font-size: 16px;
+}
+
+.appdev-modal-close:hover {
+  background: #cc7722;
+  color: #ffffff;
+}
+
+.appdev-modal-image {
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+
+.appdev-modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.appdev-modal-body {
+  padding: 40px;
+}
+
+.appdev-modal-cat {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #cc7722;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.appdev-modal-body h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1d2e2a;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+
+.appdev-modal-desc {
+  font-size: 14px;
+  color: #6c8b85;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.appdev-modal-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.appdev-modal-tech span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #1d2e2a;
+  background: #f0f2f5;
+  padding: 6px 14px;
+}
+
+.appdev-modal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #cc7722;
+  color: #ffffff;
+  padding: 14px 28px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.appdev-modal-btn:hover {
+  background: #b8681a;
+  gap: 14px;
+}
+
+/* ===== PROCESS ===== */
+.appdev-process {
+  padding: 60px 0;
+  background: #ffffff;
+}
+
+.appdev-process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  text-align: center;
+}
+
+.appdev-process-card {
+  padding: 20px 12px;
+  background: #f8f9fc;
+  border: 1px solid #eef2f5;
+  transition: all 0.3s ease;
+}
+
+.appdev-process-card:hover {
+  border-color: #cc7722;
+  transform: translateY(-3px);
+  background: #ffffff;
+}
+
+.appdev-process-num {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #cc7722;
+  margin-bottom: 12px;
+}
+
+.appdev-process-card i {
+  font-size: 28px;
+  color: #1d2e2a;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.appdev-process-card h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1d2e2a;
+}
+
+/* ===== TECHNOLOGIES ===== */
+.appdev-tech {
+  padding: 60px 0;
+  background: #f5f7fb;
+}
+
+.appdev-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.appdev-tech-group h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #cc7722;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+}
+
+.appdev-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.appdev-tech-list span {
+  background: #ffffff;
+  padding: 5px 12px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #1d2e2a;
+  border: 1px solid #eef2f5;
+  transition: all 0.3s ease;
+}
+
+.appdev-tech-list span:hover {
+  background: #cc7722;
+  color: #ffffff;
+  border-color: #cc7722;
+  transform: translateY(-2px);
+}
+
+/* ===== FAQ ===== */
+.appdev-faq {
+  padding: 60px 0;
+  background: #ffffff;
+}
+
+.appdev-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.appdev-faq-item {
+  padding: 16px 0;
+  border-bottom: 1px solid #eef2f5;
+}
+
+.appdev-faq-item h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1d2e2a;
+  margin-bottom: 6px;
+}
+
+.appdev-faq-item p {
+  font-size: 13px;
+  color: #6c8b85;
+  line-height: 1.4;
+}
+
+/* ===== CTA ===== */
+.appdev-cta {
+  padding: 60px 0;
+  background: #1d2e2a;
+  text-align: center;
+}
+
+.appdev-cta h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.appdev-cta p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 28px;
+}
+
+/* ===== AOS ===== */
+[data-aos] {
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1100px) {
+  .appdev-offerings-grid { grid-template-columns: repeat(3, 1fr); }
+  .appdev-process-grid { grid-template-columns: repeat(3, 1fr); }
+  .appdev-tech-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+}
+
+@media (max-width: 900px) {
+  .appdev-project-row {
+    grid-template-columns: 260px 1fr 50px;
+    gap: 24px;
+  }
+  .appdev-project-row-img { width: 260px; height: 170px; }
+  .appdev-project-row-title { font-size: 18px; }
+  .appdev-faq-grid { grid-template-columns: 1fr; }
+  .appdev-modal-image { height: 320px; }
+}
+
+@media (max-width: 768px) {
+  .appdev-hero { min-height: 450px; height: auto; padding: 60px 0; }
+  .appdev-hero-title { font-size: 32px; }
+  .appdev-hero-desc { font-size: 13px; }
+  .appdev-hero-buttons { flex-direction: column; align-items: flex-start; }
+  .appdev-offerings-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .appdev-projects-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .appdev-projects-header-left h2 { font-size: 26px; }
+
+  .appdev-project-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 24px 0;
+  }
+  .appdev-project-row-img { width: 100%; height: 220px; }
+  .appdev-project-row-arrow { display: none; }
+
+  .appdev-process-grid { grid-template-columns: repeat(2, 1fr); }
+  .appdev-tech-grid { grid-template-columns: 1fr; }
+  .appdev-section-header h2 { font-size: 24px; }
+  .appdev-cta h2 { font-size: 24px; }
+  .appdev-modal-image { height: 240px; }
+  .appdev-modal-body { padding: 28px; }
+  .appdev-modal-body h2 { font-size: 22px; }
+}
+
+@media (max-width: 480px) {
+  .appdev-hero-title { font-size: 26px; }
+  .appdev-offerings-grid { grid-template-columns: 1fr; }
+  .appdev-process-grid { grid-template-columns: 1fr; }
+  .appdev-project-row-img { height: 180px; }
+  .appdev-project-row-title { font-size: 16px; }
+  .appdev-projects-header-left h2 { font-size: 22px; }
+}

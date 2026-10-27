@@ -1,0 +1,12 @@
+.se-select {
+  padding: 0.55rem 0.7rem;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  background: #fff;
+  cursor: pointer;
+  width: 100%;
+}
+.se-select:focus { border-color: #cc7722; }

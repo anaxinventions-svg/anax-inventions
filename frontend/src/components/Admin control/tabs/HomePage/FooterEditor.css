@@ -1,0 +1,227 @@
+/* ============================================
+   FOOTER EDITOR - CLEAN ADMIN STYLE
+   ANAX: #1d2e2a | #cc7722
+   ============================================ */
+
+.fe-container {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.03);
+  padding: 0;
+}
+
+.fe-loading {
+  text-align: center;
+  padding: 3rem;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.fe-header {
+  background: #1d2e2a;
+  padding: 1.2rem 1.5rem;
+}
+
+.fe-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #cc7722;
+  margin: 0;
+}
+
+.fe-header p {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.5);
+  margin-top: 3px;
+}
+
+/* ===== SECTIONS ===== */
+.fe-section {
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.fe-section:last-of-type {
+  border-bottom: none;
+}
+
+.fe-section-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1d2e2a;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ===== GRID ===== */
+.fe-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.fe-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.fe-full {
+  grid-column: span 2;
+}
+
+.fe-field label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #888;
+}
+
+.fe-field input,
+.fe-field textarea {
+  padding: 0.55rem 0.7rem;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.fe-field input:focus,
+.fe-field textarea:focus {
+  border-color: #cc7722;
+}
+
+.fe-field textarea {
+  resize: vertical;
+}
+
+/* ===== ROW ===== */
+.fe-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+  align-items: center;
+}
+
+.fe-row input {
+  padding: 0.5rem 0.6rem;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  flex: 1;
+  transition: border-color 0.3s;
+}
+
+.fe-row input:focus {
+  border-color: #cc7722;
+}
+
+.fe-input-lg {
+  flex: 2 !important;
+}
+
+.fe-row-indent {
+  margin-left: 20px;
+  margin-bottom: 4px;
+}
+
+/* ===== CARD ===== */
+.fe-card {
+  border: 1px solid #eee;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+/* ===== BUTTONS ===== */
+.fe-btn-add {
+  padding: 3px 10px;
+  background: #cc7722;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s;
+}
+
+.fe-btn-add:hover {
+  background: #e0882e;
+}
+
+.fe-btn-add-sm {
+  padding: 2px 8px;
+  background: #4A90D9;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.65rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 6px;
+}
+
+.fe-btn-del {
+  padding: 4px 8px;
+  background: #fee;
+  color: #e44;
+  border: 1px solid #fcc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.7rem;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.fe-btn-del:hover {
+  background: #e44;
+  color: #fff;
+}
+
+/* ===== SAVE BUTTON ===== */
+.fe-save-btn {
+  width: calc(100% - 3rem);
+  margin: 1.5rem;
+  padding: 12px;
+  background: #cc7722;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s;
+}
+
+.fe-save-btn:hover {
+  background: #e0882e;
+  box-shadow: 0 4px 15px rgba(204,119,34,0.3);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .fe-grid {
+    grid-template-columns: 1fr;
+  }
+  .fe-full {
+    grid-column: span 1;
+  }
+  .fe-row {
+    flex-wrap: wrap;
+  }
+  .fe-row input {
+    min-width: 100%;
+  }
+}

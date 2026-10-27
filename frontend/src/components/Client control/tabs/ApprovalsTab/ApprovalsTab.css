@@ -1,0 +1,166 @@
+.approvals-tab {
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.tab-header {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.tab-header h2 {
+  font-size: 1.3rem;
+  color: #1d2e2a;
+  margin-bottom: 6px;
+}
+
+.tab-header p {
+  color: #6c757d;
+  font-size: 0.8rem;
+}
+
+.approvals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.approval-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e9ecef;
+  transition: all 0.2s;
+}
+
+.approval-card:hover {
+  border-color: #cc7722;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.approval-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.approval-type {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.type-icon {
+  font-size: 1.3rem;
+}
+
+.approval-header h3 {
+  font-size: 1rem;
+  color: #1d2e2a;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+
+.status-badge.pending {
+  background: #fff3cd;
+  color: #ffc107;
+}
+
+.status-badge.approved {
+  background: #d4edda;
+  color: #28a745;
+}
+
+.approval-desc {
+  color: #6c757d;
+  font-size: 0.75rem;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.approval-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.approval-actions button,
+.approval-actions a {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.view-btn {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  color: #1d2e2a;
+}
+
+.view-btn:hover {
+  border-color: #cc7722;
+  color: #cc7722;
+}
+
+.approve-btn {
+  background: #28a745;
+  border: none;
+  color: #fff;
+}
+
+.approve-btn:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+.revision-btn {
+  background: #ffc107;
+  border: none;
+  color: #1d2e2a;
+}
+
+.revision-btn:hover {
+  background: #e0a800;
+}
+
+.empty-state, .loading-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .approval-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .approval-actions {
+    flex-direction: column;
+  }
+  
+  .approval-actions button,
+  .approval-actions a {
+    width: 100%;
+    text-align: center;
+  }
+}

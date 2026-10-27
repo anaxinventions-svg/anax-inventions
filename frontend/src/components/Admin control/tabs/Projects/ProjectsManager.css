@@ -1,0 +1,272 @@
+.projects-manager {
+  padding: 20px;
+  background: #f8f9fa;
+  min-height: 100%;
+  border-radius: 12px;
+}
+
+.pm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.pm-header-left h2 {
+  font-size: 1.4rem;
+  color: #1d2e2a;
+  margin-bottom: 4px;
+}
+
+.pm-header-left p {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.pm-add-btn {
+  background: #cc7722;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.pm-add-btn:hover {
+  background: #1d2e2a;
+  transform: translateY(-2px);
+}
+
+.pm-table-container {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.pm-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pm-table th {
+  background: #1d2e2a;
+  color: #fff;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pm-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e9ecef;
+  font-size: 0.8rem;
+  color: #495057;
+}
+
+.pm-table tr:hover {
+  background: #f8f9fa;
+}
+
+.pm-status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+
+.pm-progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #e9ecef;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.pm-progress-fill {
+  height: 100%;
+  background: #cc7722;
+  border-radius: 3px;
+  transition: width 0.3s;
+}
+
+.pm-action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.pm-action-btn.delete:hover {
+  background: #f8d7da;
+}
+
+.pm-loading, .pm-empty {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.pm-empty-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+/* Modal */
+.pm-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.pm-modal {
+  background: #fff;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: pmSlideIn 0.3s ease;
+}
+
+@keyframes pmSlideIn {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pm-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.pm-modal-header h3 {
+  font-size: 1.2rem;
+  color: #1d2e2a;
+  margin: 0;
+}
+
+.pm-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #adb5bd;
+}
+
+.pm-modal-close:hover {
+  color: #dc3545;
+}
+
+.pm-modal-body {
+  padding: 24px;
+}
+
+.pm-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.pm-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pm-form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.pm-form-group label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #495057;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pm-form-group input,
+.pm-form-group select,
+.pm-form-group textarea {
+  padding: 10px 12px;
+  border: 1.5px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.pm-form-group input:focus,
+.pm-form-group select:focus,
+.pm-form-group textarea:focus {
+  outline: none;
+  border-color: #cc7722;
+}
+
+.pm-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid #e9ecef;
+}
+
+.pm-btn-cancel {
+  padding: 10px 20px;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.pm-btn-cancel:hover {
+  background: #e9ecef;
+}
+
+.pm-btn-create {
+  padding: 10px 24px;
+  background: #cc7722;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.pm-btn-create:hover:not(:disabled) {
+  background: #1d2e2a;
+}
+
+.pm-btn-create:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .pm-form-row {
+    grid-template-columns: 1fr;
+  }
+}

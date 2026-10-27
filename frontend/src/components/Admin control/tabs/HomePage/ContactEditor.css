@@ -1,0 +1,24 @@
+.ce-container { background: #fff; border-radius: 8px; box-shadow: 0 1px 8px rgba(0,0,0,0.03); }
+.ce-header { background: #1d2e2a; padding: 1rem 1.5rem; }
+.ce-header h2 { color: #cc7722; font-size: 1.1rem; }
+.ce-section { padding: 1.2rem 1.5rem; border-bottom: 1px solid #f0f0f0; }
+.ce-section h3 { font-size: 0.85rem; color: #1d2e2a; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem; }
+.ce-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+.ce-field { display: flex; flex-direction: column; gap: 0.3rem; }
+.ce-full { grid-column: span 2; }
+.ce-field label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #888; }
+.ce-field input, .ce-field textarea { padding: 0.55rem 0.7rem; border: 1.5px solid #e0e0e0; border-radius: 4px; font-size: 0.75rem; font-family: 'Inter', sans-serif; outline: none; }
+.ce-field input:focus, .ce-field textarea:focus { border-color: #cc7722; }
+.ce-field textarea { resize: vertical; }
+
+.ce-row { display: flex; gap: 6px; margin-bottom: 6px; align-items: center; }
+.ce-row input { padding: 0.5rem 0.6rem; border: 1.5px solid #e0e0e0; border-radius: 4px; font-size: 0.72rem; flex: 1; outline: none; }
+.ce-row input:focus { border-color: #cc7722; }
+.ce-input-lg { flex: 2 !important; }
+
+.ce-btn-add { padding: 3px 10px; background: #cc7722; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 0.7rem; font-weight: 600; }
+.ce-btn-del { padding: 4px 8px; background: #fee; color: #e44; border: 1px solid #fcc; border-radius: 4px; cursor: pointer; font-size: 0.7rem; }
+
+.ce-save-btn { width: calc(100% - 3rem); margin: 1.5rem; padding: 12px; background: #cc7722; color: #fff; border: none; border-radius: 6px; font-size: 0.9rem; font-weight: 700; cursor: pointer; }
+
+@media (max-width: 600px) { .ce-grid { grid-template-columns: 1fr; } .ce-full { grid-column: span 1; } .ce-row { flex-wrap: wrap; } }
