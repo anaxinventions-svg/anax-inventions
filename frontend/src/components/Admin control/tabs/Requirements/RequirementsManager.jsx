@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 import './RequirementsManager.css';
 
-const API_URL = 'http://localhost:5001/api';
+const API_URL = 'https://anax-inventions.onrender.com/api';
 
 const serviceImages = {
   'web development': 'https://cdn-icons-png.flaticon.com/512/2920/2920277.png',

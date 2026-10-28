@@ -12,7 +12,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './ServicesBanner.css';
 
-const API_URL = 'http://localhost:5001/api';
+const API_URL = 'https://anax-inventions.onrender.com/api';
 
 const iconMap = {
   'FaCode': FaCode,

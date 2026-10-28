@@ -3,7 +3,7 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import './ContactEditor.css';
 
-const API_URL = 'http://localhost:5001/api';
+const API_URL = 'https://anax-inventions.onrender.com/api';
 
 const ContactEditor = () => {
   const [loading, setLoading] = useState(true);

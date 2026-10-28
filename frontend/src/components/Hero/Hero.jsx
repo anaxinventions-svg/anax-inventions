@@ -3,7 +3,7 @@ import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from
 import NetworkBackground from '../NetworkBackground';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5001/api';
+const API_URL = 'https://anax-inventions.onrender.com/api';
 
 const Hero = () => {
   const [content, setContent] = useState(null);

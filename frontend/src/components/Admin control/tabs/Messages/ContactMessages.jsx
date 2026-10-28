@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import html2pdf from 'html2pdf.js';
 import './ContactMessages.css';
 
-const API_URL = 'http://localhost:5001/api';
+const API_URL = 'https://anax-inventions.onrender.com/api';
 
 const ContactMessages = () => {
   const [messages, setMessages] = useState([]);

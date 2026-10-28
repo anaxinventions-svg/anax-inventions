@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import DynamicPage from '../ServicePages/DynamicPage/DynamicPage';
 
-const API_URL = 'http://localhost:5001/api';
+const API_URL = 'https://anax-inventions.onrender.com/api';
 
 // ✅ SLUG MAPPING (Navbar slug to page slug)
 const slugMapping = {

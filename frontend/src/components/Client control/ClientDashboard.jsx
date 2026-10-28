@@ -10,7 +10,7 @@ import ChangeRequestsTab from './tabs/ChangeRequestsTab/ChangeRequestsTab';
 import ProfileTab from './tabs/ProfileTab/ProfileTab';
 import './ClientDashboard.css';
 
-const API_URL = 'http://localhost:5001/api';
+const API_URL = 'https://anax-inventions.onrender.com/api';
 
 const ClientDashboard = () => {
   const [user, setUser] = useState(null);

@@ -4,7 +4,7 @@ import { FaQuoteLeft, FaStar, FaChevronLeft, FaChevronRight } from 'react-icons/
 import axios from 'axios';
 import './Testimonials.css';
 
-const API_URL = 'http://localhost:5001/api';
+const API_URL = 'https://anax-inventions.onrender.com/api';
 
 const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);

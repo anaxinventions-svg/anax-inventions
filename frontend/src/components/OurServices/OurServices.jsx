@@ -5,7 +5,7 @@ import NetworkBackground from '../NetworkBackground';
 import axios from 'axios';
 import './OurServices.css';
 
-const API_URL = 'http://localhost:5001/api';
+const API_URL = 'https://anax-inventions.onrender.com/api';
 
 const OurServices = () => {
   const [services, setServices] = useState([]);

@@ -4,7 +4,7 @@ import axios from 'axios';
 import { signInWithGoogle } from '../../firebase';
 import './Auth.css';
 
-const API_URL = 'http://localhost:5001/api/auth';
+const API_URL = 'https://anax-inventions.onrender.com/api/auth';
 
 const Auth = ({ isOpen, onClose, adminMode = false }) => {
   const [panel, setPanel] = useState('signin');

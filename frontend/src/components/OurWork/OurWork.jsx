@@ -4,7 +4,7 @@ import { FaExternalLinkAlt, FaEye, FaUsers, FaStar } from 'react-icons/fa';
 import axios from 'axios';
 import './OurWork.css';
 
-const API_URL = 'http://localhost:5001/api';
+const API_URL = 'https://anax-inventions.onrender.com/api';
 
 const OurWork = () => {
   const [projects, setProjects] = useState([]);
